@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+.menu a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  background: #f4ce14;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.menu a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.img-thumb-parent {
+  overflow: hidden;
+}
+
+.img-thumb {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-thumb:hover {
+  transform: scale(1.2);
+}
+
+input:user-invalid,
+select:user-invalid {
+  border: 2px solid red;
+}
